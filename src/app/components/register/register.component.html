@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row abs-center">
+        <div class="col-12 col-md-4">
+            <div class="card p-4">
+                <div class="card-body">
+                    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+                        <div class="row mb-3">
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label">Nombre completo</label>
+                                <input [(ngModel)]="name" name="name" type="text" class="form-control"
+                                    id="exampleFormControlInput1" placeholder="nombre completo" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput2" class="form-label">Correo electronico</label>
+                                <input [(ngModel)]="email" name="email" type="email" class="form-control"
+                                    id="exampleFormControlInput2" placeholder="nombre@ejemplo.com" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput3" class="form-label">Contraseña</label>
+                                <input [(ngModel)]="password" name="password" type="password" class="form-control"
+                                    id="exampleFormControlInput3" placeholder="*********" required>
+                            </div>
+                        </div>
+                        <div class="row mt-2 px-2">
+                            <button type="submit" class="btn btn-primary">Registrarte</button>
+                        </div>
+                        <div class="row text-center mt-2 ">
+                            <a routerLink="/" class="links"><small>Iniciar Sesión</small></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

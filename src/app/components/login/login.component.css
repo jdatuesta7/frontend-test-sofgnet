@@ -1,0 +1,21 @@
+.card{
+    background-color: #0E1228;
+}
+
+.btn-primary{
+    background-color: #3948A1;
+    border: #3948A1;
+}
+
+.links{
+    text-decoration: none;
+    color: #E9EBF7;
+    font-weight: lighter;
+}
+
+.form-control{
+    background-color: #E9EBF7;
+    color: #0E1228;
+    font-weight: bold;
+}
+
