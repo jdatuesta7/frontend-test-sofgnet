@@ -20,6 +20,9 @@ import { DriverEditComponent } from './components/drivers/driver-edit/driver-edi
 import { VehiclesListComponent } from './components/vehicles/vehicles-list/vehicles-list.component';
 import { VehiclesCreateComponent } from './components/vehicles/vehicles-create/vehicles-create.component';
 import { VehiclesEditComponent } from './components/vehicles/vehicles-edit/vehicles-edit.component';
+import { RoutesListComponent } from './components/routes/routes-list/routes-list.component';
+import { RoutesCreateComponent } from './components/routes/routes-create/routes-create.component';
+import { RoutesEditComponent } from './components/routes/routes-edit/routes-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { VehiclesEditComponent } from './components/vehicles/vehicles-edit/vehic
     DriverEditComponent,
     VehiclesListComponent,
     VehiclesCreateComponent,
-    VehiclesEditComponent
+    VehiclesEditComponent,
+    RoutesListComponent,
+    RoutesCreateComponent,
+    RoutesEditComponent
   ],
   imports: [
     BrowserModule,

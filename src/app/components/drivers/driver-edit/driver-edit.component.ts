@@ -46,8 +46,8 @@ export class DriverEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateDriver(formCreatePublication: any) {
-    if (formCreatePublication.valid) {
+  updateDriver(formCreate: any) {
+    if (formCreate.valid) {
       const driver: UpdateDriver = {
         id: this.id,
         first_name: this.first_name,

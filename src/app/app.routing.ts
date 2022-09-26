@@ -6,6 +6,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { VehiclesListComponent } from './components/vehicles/vehicles-list/vehicles-list.component';
+import { RoutesListComponent } from './components/routes/routes-list/routes-list.component';
 
 const appRoute : Routes = [
     {
@@ -31,7 +32,11 @@ const appRoute : Routes = [
         component: VehiclesListComponent,
         canActivate: [AuthGuard]
     },
-    
+    {
+        path: 'routes',
+        component: RoutesListComponent,
+        canActivate: [AuthGuard]
+    },
 
     // Ruta de respaldo
     { path: 

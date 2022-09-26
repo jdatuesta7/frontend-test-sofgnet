@@ -3,11 +3,11 @@
 <div class="container mt-4">
 
     <div class="row">
-        <h1 class="col-md-8 fs-2">Listado de vehiculos</h1>
+        <h1 class="col-md-8 fs-2">Listado de rutas</h1>
 
         <div class="col-md-4">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vehicle-create">Nuevo
-                vehiculo
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#route-create">Nueva
+                ruta
             </button>
         </div>
     </div>
@@ -16,21 +16,21 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Marca</th>
-                <th scope="col">Año</th>
-                <th scope="col">Capacidad</th>
+                <th scope="col">Conductor</th>
+                <th scope="col">SSD</th>
+                <th scope="col">Vehiculo</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let vehicle of vehicles; let i = index">
+            <tr *ngFor="let route of routes; let i = index">
                 <th scope="row">{{i+1}}</th>
-                <td>{{vehicle.make}}</td>
-                <td>{{vehicle.year}}</td>
-                <td>{{vehicle.capacity}}</td>
+                <td>{{route.driver.first_name + ' ' + route.driver.last_name}}</td>
+                <td>{{route.driver.ssd}}</td>
+                <td>{{route.vehicle.make}}</td>
                 <td>
-                    {{vehicle.description.slice(0, 70) }}{{ vehicle.description.length >= 70 ? '...' : '' }}
+                    {{route.description.slice(0, 70) }}{{ route.description.length >= 70 ? '...' : '' }}
                 </td>
 
                 <td>
@@ -40,8 +40,8 @@
                             Acciones
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a (click)="editVehicle(vehicle)" class="dropdown-item" role="button">Editar</a></li>
-                            <li><a (click)="removeVehicle(vehicle.id)" class="dropdown-item" role="button">Eliminar</a>
+                            <li><a (click)="editRoute(route)" class="dropdown-item" role="button">Editar</a></li>
+                            <li><a (click)="removeRoute(route.id)" class="dropdown-item" role="button">Eliminar</a>
                             </li>
                         </ul>
                     </div>
@@ -50,10 +50,10 @@
         </tbody>
     </table>
 
-    <app-vehicles-create></app-vehicles-create>
+    <app-routes-create></app-routes-create>
 
-    <button #asBtnEditModal type="button" hidden data-bs-toggle="modal" data-bs-target="#vehicle-edit">
+    <button #asBtnEditModal type="button" hidden data-bs-toggle="modal" data-bs-target="#route-edit">
         Editar vehiculo
     </button>
-    <app-vehicles-edit></app-vehicles-edit>
+    <app-routes-edit></app-routes-edit>
 </div>

@@ -1,0 +1,45 @@
+<!-- Modal -->
+<div class="modal fade" id="route-edit" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form #formUpdateRoute="ngForm" (ngSubmit)="updateRoute(formUpdateRoute)">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Actualizar ruta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="driver_id" class="form-label text-dark">Conductor</label>
+                        <select class="form-control" name="driver_id" [(ngModel)]="driver_id" id="driver" required>
+                            <option selected disabled [value]="0">
+                                Seleccionar...
+                            </option>
+                            <option *ngFor="let driver of drivers" [value]="driver.id">
+                                {{ driver.first_name + ' ' + driver.last_name}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vehicle_id" class="form-label text-dark">vehiculo</label>
+                        <select class="form-control" name="vehicle_id" [(ngModel)]="vehicle_id" id="vehicle_id" required>
+                            <option selected disabled [value]="0">
+                                Seleccionar...
+                            </option>
+                            <option *ngFor="let vehicle of vehicles" [value]="vehicle.id">
+                                {{ vehicle.make }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label text-dark">Descripción</label>
+                        <textarea [(ngModel)]="description" class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button #asBtnClose type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar ruta</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

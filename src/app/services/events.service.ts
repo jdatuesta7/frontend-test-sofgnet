@@ -1,11 +1,12 @@
 import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
 import { EventEmitter } from "@angular/core";
 import { UpdateVehicle } from '../models/vehicles/UpdateVehicle';
+import { Route } from '../models/routes/Route';
 
 export class EventsService {
 
     $refreshDrivers = new EventEmitter();
-    refreshDriversList(from: any) {
+    refreshDriversList(from: string) {
         this.$refreshDrivers.emit(from);
     }
 
@@ -20,7 +21,17 @@ export class EventsService {
     }
 
     $refreshVehicles = new EventEmitter();
-    refreshVehiclesList(from: any) {
+    refreshVehiclesList(from: string) {
         this.$refreshVehicles.emit(from);
+    }
+
+    $refreshRoutes = new EventEmitter();
+    refreshRoutesList(from: string) {
+        this.$refreshRoutes.emit(from);
+    }
+
+    $getRoutes = new EventEmitter();
+    getRoutes(route: Route) {
+        this.$getRoutes.emit(route);
     }
 }
