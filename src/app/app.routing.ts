@@ -5,9 +5,9 @@ import { LoginComponent } from "./components/login/login.component";
 import { HomeComponent } from "./components/home/home.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { AuthGuard } from "./guards/auth.guard";
+import { VehiclesListComponent } from './components/vehicles/vehicles-list/vehicles-list.component';
 
 const appRoute : Routes = [
-    // Autenticacion
     {
         path: '', 
         component: LoginComponent
@@ -21,13 +21,17 @@ const appRoute : Routes = [
         component: HomeComponent,
         canActivate: [AuthGuard]
     },
-
-    //Conductores
     {
         path: 'drivers',
         component: DriversListComponent,
         canActivate: [AuthGuard]
     },
+    {
+        path: 'vehicles',
+        component: VehiclesListComponent,
+        canActivate: [AuthGuard]
+    },
+    
 
     // Ruta de respaldo
     { path: 

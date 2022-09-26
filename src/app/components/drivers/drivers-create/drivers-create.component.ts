@@ -23,14 +23,13 @@ export class DriversCreateComponent implements OnInit {
   zip: string = '';
   phone: string = '';
 
-  token: string;
+  token: string = this._cookieService.get('token');
 
   constructor(
     private _driversService: DriversService,
     private _cookieService: CookieService,
     private _eventsService: EventsService
   ) { 
-    this.token = this._cookieService.get('token');
   }
 
   ngOnInit(): void {

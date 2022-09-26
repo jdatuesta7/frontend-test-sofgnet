@@ -1,0 +1,35 @@
+<!-- Modal -->
+<div class="modal fade" id="vehicle-edit" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form #formEditVehicle="ngForm" (ngSubmit)="updateVehicle(formEditVehicle)">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Editar vehiculo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="make" class="form-label text-dark">Marca</label>
+                        <input type="text" name="make" [(ngModel)]="make" class="form-control" id="make" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="year" class="form-label text-dark">Año</label>
+                        <input type="number" name="year" [(ngModel)]="year" class="form-control" id="year" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="capacity" class="form-label text-dark">Capacidad</label>
+                        <input type="number" name="capacity" [(ngModel)]="capacity" class="form-control" id="capacity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label text-dark">Descripción</label>
+                        <textarea [(ngModel)]="description" class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button #asBtnClose type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar vehiculo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

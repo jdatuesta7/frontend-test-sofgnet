@@ -13,25 +13,23 @@ declare var iziToast: any;
 })
 export class DriverEditComponent implements OnInit {
 
-  id: number = 0;
-  first_name: string = '';
-  last_name: string = '';
-  ssd: string = '';
-  dob: any;
-  address: string = '';
-  city: string = '';
-  zip: string = '';
-  phone: string = '';
+  id!: number;
+  first_name!: string;
+  last_name!: string;
+  ssd!: string;
+  dob!: any;
+  address!: string;
+  city!: string;
+  zip!: string;
+  phone!: string;
 
-  token: string = '';
+  token: string = this._cookieService.get('token');
 
   constructor(
     private _eventsService: EventsService,
     private _driverService: DriversService,
     private _cookieService: CookieService
   ) {
-    this.token = this._cookieService.get('token');
-
     this._eventsService.$getDriver.subscribe((driver) => {
       this.id = driver.id;
       this.first_name = driver.first_name;

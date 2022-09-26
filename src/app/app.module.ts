@@ -17,6 +17,9 @@ import { DriversListComponent } from './components/drivers/drivers-list/drivers-
 import { DriversCreateComponent } from './components/drivers/drivers-create/drivers-create.component';
 import { EventsService } from './services/events.service';
 import { DriverEditComponent } from './components/drivers/driver-edit/driver-edit.component';
+import { VehiclesListComponent } from './components/vehicles/vehicles-list/vehicles-list.component';
+import { VehiclesCreateComponent } from './components/vehicles/vehicles-create/vehicles-create.component';
+import { VehiclesEditComponent } from './components/vehicles/vehicles-edit/vehicles-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { DriverEditComponent } from './components/drivers/driver-edit/driver-edi
     RegisterComponent,
     DriversListComponent,
     DriversCreateComponent,
-    DriverEditComponent
+    DriverEditComponent,
+    VehiclesListComponent,
+    VehiclesCreateComponent,
+    VehiclesEditComponent
   ],
   imports: [
     BrowserModule,

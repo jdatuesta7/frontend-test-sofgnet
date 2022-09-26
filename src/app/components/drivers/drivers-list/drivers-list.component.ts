@@ -15,15 +15,13 @@ export class DriversListComponent implements OnInit {
   @ViewChild('asBtnEditModal') btnEditModal: ElementRef|any;
 
   drivers: Array<UpdateDriver> = [];
-  token: string = "";
+  token: string = this._cookieService.get('token');
 
   constructor(
     private _driversService: DriversService,
     private _cookieService: CookieService,
     private _eventsService: EventsService
     ) { 
-    this.token = this._cookieService.get('token');
-
     this._eventsService.$refreshDrivers.subscribe((from) => {
       this.getDrivers();
 
