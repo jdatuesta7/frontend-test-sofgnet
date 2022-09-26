@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   ) {
     if (this._cookieService.check('token')) {
       this.token = this._cookieService.get('token');
-      console.log(this.token);
     }
 
   }

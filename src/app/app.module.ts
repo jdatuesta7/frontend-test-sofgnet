@@ -13,6 +13,10 @@ import { AuthService } from './services/auth.service';
 import { DriversService } from './services/drivers.service';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
+import { DriversListComponent } from './components/drivers/drivers-list/drivers-list.component';
+import { DriversCreateComponent } from './components/drivers/drivers-create/drivers-create.component';
+import { EventsService } from './services/events.service';
+import { DriverEditComponent } from './components/drivers/driver-edit/driver-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    DriversListComponent,
+    DriversCreateComponent,
+    DriverEditComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

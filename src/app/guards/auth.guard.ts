@@ -16,6 +16,7 @@ export class AuthGuard implements CanActivate {
   canActivate():any{
     if (!this._authService.isAuthenticated()) {
       this._router.navigate(['/']);
+      console.log('NO PERMITIDO');
       return false;
     }
     return true;

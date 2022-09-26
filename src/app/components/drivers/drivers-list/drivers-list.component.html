@@ -1,0 +1,54 @@
+<app-sidebar></app-sidebar>
+
+<div class="container mt-4">
+
+    <div class="row">
+        <h1 class="col-md-8 fs-2">Listado de conductores</h1>
+
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#driver-create">Nueva
+                publicación
+            </button>
+        </div>
+    </div>
+
+    <table class="table table-striped table-hover bg-white mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">SSD</th>
+                <th scope="col">Telefono</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let driver of drivers; let i = index">
+                <th scope="row">{{i}}</th>
+                <td>{{driver.first_name}}</td>
+                <td>{{driver.last_name}}</td>
+                <td>{{driver.ssd}}</td>
+                <td>{{driver.phone}}</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Acciones
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a (click)="editDriver(driver)" class="dropdown-item" role="button">Ver/Editar</a></li>
+                          <li><a (click)="removeDriver(driver.id)" class="dropdown-item" role="button">Eliminar</a></li>
+                        </ul>
+                      </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <app-drivers-create></app-drivers-create>
+
+    <button #asBtnEditModal type="button" hidden data-bs-toggle="modal" data-bs-target="#driver-edit">
+        Editar conductor
+    </button>
+    <app-driver-edit></app-driver-edit>
+</div>

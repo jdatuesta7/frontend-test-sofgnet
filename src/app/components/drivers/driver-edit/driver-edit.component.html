@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div class="modal fade" id="driver-edit" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form #formCreatePublication="ngForm" (ngSubmit)="updateDriver(formCreatePublication)">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">Editar conductor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label text-dark"> Nombre</label>
+                        <input type="text" name="first_name" [(ngModel)]="first_name" class="form-control" id="first_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label text-dark">Apellido</label>
+                        <input type="text" name="last_name" [(ngModel)]="last_name" class="form-control" id="last_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ssd" class="form-label text-dark">SSD</label>
+                        <input type="text" name="ssd" [(ngModel)]="ssd" class="form-control" id="ssd" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dob" class="form-label text-dark">Fecha de nacimiento</label>
+                        <input type="date" name="dob" [(ngModel)]="dob" class="form-control" id="dob" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label text-dark">Dirección</label>
+                        <input type="text" name="address" [(ngModel)]="address" class="form-control" id="address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class="form-label text-dark">Ciudad</label>
+                        <input type="text" name="city" [(ngModel)]="city" class="form-control" id="city">
+                    </div>
+                    <div class="mb-3">
+                        <label for="zip" class="form-label text-dark">Codigo postal</label>
+                        <input type="text" name="zip" [(ngModel)]="zip" class="form-control" id="zip">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label text-dark">Telefono</label>
+                        <input type="number" name="phone" [(ngModel)]="phone" class="form-control" id="phone">
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button #asBtnClose type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar conductor</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
