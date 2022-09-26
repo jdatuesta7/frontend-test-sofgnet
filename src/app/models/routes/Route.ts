@@ -1,4 +1,4 @@
-import { UpdateDriver } from "../drivers/updateDriver";
+import { UpdateDriver } from "../drivers/UpdateDriver";
 import { UpdateVehicle } from "../vehicles/UpdateVehicle";
 
 export interface Route {

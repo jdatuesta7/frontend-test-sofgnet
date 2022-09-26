@@ -1,9 +1,9 @@
-import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
+import { UpdateDriver } from 'src/app/models/drivers/UpdateDriver';
 import { GLOBAL } from './GLOBAL';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
-import { CreateDriver } from '../models/drivers/createDriver';
+import { CreateDriver } from '../models/drivers/CreateDriver';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
+import { UpdateDriver } from 'src/app/models/drivers/UpdateDriver';
 import { DriversService } from 'src/app/services/drivers.service';
 import { EventsService } from 'src/app/services/events.service';
 

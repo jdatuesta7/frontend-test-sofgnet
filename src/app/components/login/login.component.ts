@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.token) {
-      this._router.navigate(['/home']);
+      this._router.navigate(['/drivers']);
     }
   }
 
@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
           iziToast.error({
             title: 'Error',
             position: 'topRight',
-            message: error
+            message: error.error.error
           });
         });
 

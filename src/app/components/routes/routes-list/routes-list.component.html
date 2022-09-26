@@ -40,6 +40,7 @@
                             Acciones
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a [routerLink]="['/routes/', route.id ,'schedules']" routerLinkActive="router-link-active"  class="dropdown-item" role="button">Horarios</a></li>
                             <li><a (click)="editRoute(route)" class="dropdown-item" role="button">Editar</a></li>
                             <li><a (click)="removeRoute(route.id)" class="dropdown-item" role="button">Eliminar</a>
                             </li>

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoginComponent } from './components/login/login.component';
-import { HomeComponent } from './components/home/home.component';
 import { routing } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
@@ -23,13 +22,15 @@ import { VehiclesEditComponent } from './components/vehicles/vehicles-edit/vehic
 import { RoutesListComponent } from './components/routes/routes-list/routes-list.component';
 import { RoutesCreateComponent } from './components/routes/routes-create/routes-create.component';
 import { RoutesEditComponent } from './components/routes/routes-edit/routes-edit.component';
+import { SchedulesViewComponent } from './components/schedules/schedules-view/schedules-view.component';
+import { SchedulesCreateComponent } from './components/schedules/schedules-create/schedules-create.component';
+import { SchedulesListComponent } from './components/schedules/schedules-list/schedules-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     LoginComponent,
-    HomeComponent,
     RegisterComponent,
     DriversListComponent,
     DriversCreateComponent,
@@ -39,7 +40,10 @@ import { RoutesEditComponent } from './components/routes/routes-edit/routes-edit
     VehiclesEditComponent,
     RoutesListComponent,
     RoutesCreateComponent,
-    RoutesEditComponent
+    RoutesEditComponent,
+    SchedulesViewComponent,
+    SchedulesCreateComponent,
+    SchedulesListComponent
   ],
   imports: [
     BrowserModule,

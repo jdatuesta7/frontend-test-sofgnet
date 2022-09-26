@@ -1,4 +1,4 @@
-import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
+import { UpdateDriver } from 'src/app/models/drivers/UpdateDriver';
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from 'src/app/services/events.service';
 import { DriversService } from 'src/app/services/drivers.service';

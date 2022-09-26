@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
+import { UpdateDriver } from 'src/app/models/drivers/UpdateDriver';
 import { CreateRoute } from 'src/app/models/routes/CreateRoute';
 import { UpdateVehicle } from 'src/app/models/vehicles/UpdateVehicle';
 import { DriversService } from 'src/app/services/drivers.service';
@@ -83,7 +83,7 @@ export class RoutesCreateComponent implements OnInit {
           console.log(error);
         });
     }else{
-      iziToast.success({
+      iziToast.error({
         title: 'Error',
         message: 'Formulario invalido',
         position: 'topRight'

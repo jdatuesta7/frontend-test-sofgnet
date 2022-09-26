@@ -1,4 +1,4 @@
-import { CreateDriver } from 'src/app/models/drivers/createDriver';
+import { CreateDriver } from 'src/app/models/drivers/CreateDriver';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { DriversService } from 'src/app/services/drivers.service';

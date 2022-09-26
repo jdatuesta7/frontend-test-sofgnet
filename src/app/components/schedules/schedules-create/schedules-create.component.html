@@ -1,0 +1,25 @@
+<form #formCreateSchedule="ngForm" (ngSubmit)="createSchedule(formCreateSchedule)">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="modal-title text-dark" id="exampleModalLabel">Nuevo horario</h5>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="week_num" class="form-label text-dark">Numero de semanas</label>
+                <input type="number" name="week_num" [(ngModel)]="week_num" class="form-control" id="week_num" required>
+            </div>
+            <div class="mb-3">
+                <label for="from" class="form-label text-dark">Desde</label>
+                <input type="datetime-local" step="1" name="from" [(ngModel)]="from" class="form-control" id="from" required>
+            </div>
+            <div class="mb-3">
+                <label for="to" class="form-label text-dark">Hasta</label>
+                <input type="datetime-local" step="1" name="to" [(ngModel)]="to" class="form-control" id="to"
+                    required>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Añadir horario</button>
+        </div>
+    </div>
+</form>

@@ -1,4 +1,4 @@
-import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
+import { UpdateDriver } from 'src/app/models/drivers/UpdateDriver';
 import { EventEmitter } from "@angular/core";
 import { UpdateVehicle } from '../models/vehicles/UpdateVehicle';
 import { Route } from '../models/routes/Route';
@@ -33,5 +33,10 @@ export class EventsService {
     $getRoutes = new EventEmitter();
     getRoutes(route: Route) {
         this.$getRoutes.emit(route);
+    }
+
+    $refreshSchedules = new EventEmitter();
+    refreshSchedules() {
+        this.$refreshSchedules.emit();
     }
 }

@@ -2,11 +2,11 @@ import { DriversListComponent } from './components/drivers/drivers-list/drivers-
 import { Routes, RouterModule } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
 import { LoginComponent } from "./components/login/login.component";
-import { HomeComponent } from "./components/home/home.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { AuthGuard } from "./guards/auth.guard";
 import { VehiclesListComponent } from './components/vehicles/vehicles-list/vehicles-list.component';
 import { RoutesListComponent } from './components/routes/routes-list/routes-list.component';
+import { SchedulesViewComponent } from './components/schedules/schedules-view/schedules-view.component';
 
 const appRoute : Routes = [
     {
@@ -16,11 +16,6 @@ const appRoute : Routes = [
     {
         path: 'register', 
         component: RegisterComponent
-    },
-    {
-        path: 'home', 
-        component: HomeComponent,
-        canActivate: [AuthGuard]
     },
     {
         path: 'drivers',
@@ -35,6 +30,11 @@ const appRoute : Routes = [
     {
         path: 'routes',
         component: RoutesListComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'routes/:route/schedules',
+        component: SchedulesViewComponent,
         canActivate: [AuthGuard]
     },
 

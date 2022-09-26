@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { UpdateDriver } from 'src/app/models/drivers/updateDriver';
+import { UpdateDriver } from 'src/app/models/drivers/UpdateDriver';
 import { UpdateRoute } from 'src/app/models/routes/UpdateRoute';
 import { UpdateVehicle } from 'src/app/models/vehicles/UpdateVehicle';
 import { DriversService } from 'src/app/services/drivers.service';
